@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "real-time-db-3ebd4": {
+      "hosting": {
+        "angular-firebase-demo": [
+          "real-time-db-3ebd4"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<div  class="bg-container" style="position: relative;">
+    <hr>
+    <div  class="mainmenu container">
+        <div class="leftmenu">
+            <input id="search" #search placeholder="Search" [(ngModel)] = "searchTerm" type="text">
+            <button id="buttonSearch" >Search</button>
+        </div>
+        <div class="rightmenu">            
+            <button id="postJobButton"  class="btn btn-primary btn-md" (click)="createTask()" >Create Task</button>   
+        </div>      
+    </div>
+     <div  class="container" style="position: relative;">
+        <table class="table" style="background-color: white;">
+            <thead class="thead-dark">
+                <tr>
+
+                    <th scope="col">Id</th>
+                    <th scope="col">Descrip</th>
+                    <th scope="col">Created</th>
+                    <th scope="col">Completed</th>
+                    <th>Edit Panel</th> 
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr  *ngFor="let task of tasks ">
+                    <td>{{task.id}}</td>
+                    <td>{{task.descrip}}</td>
+                    <td>{{task.created}}</td>
+                    <td>{{task.completed}}</td>
+                    <td>
+                        <div>
+                            <button class="btn btn-primary bt-sm" (click)="editTask(task)">Edit</button>
+                            <button class="btn btn-danger bt-sm" (click)="deleteTask(task)">Delete</button>
+                        </div>    
+                    </td>
+                
+                </tr>
+
+            </tbody>
+        </table>
+     </div>
+       
+
+</div>
